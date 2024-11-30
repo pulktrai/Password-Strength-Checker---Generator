@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker & Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Password Strength Checker & Generator</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Password Strength Checker Section -->
+        <section id="password-checker" class="section">
+            <div class="container checker-container">
+                <h2>Password Strength Checker</h2>
+                <p>Test the strength of your password in real-time.</p>
+
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <i id="togglePassword" class="fas fa-eye"></i>
+                </div>
+                <div id="strengthMessage">Password Strength: <span id="strength">N/A</span></div>
+                <div class="strength-bar">
+                    <div id="strengthBar"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Password Generator Section -->
+        <section id="password-generator" class="section generator-section">
+            <div class="container generator-container">
+                <h2>Password Generator</h2>
+                <p>Generate a strong, random password for your accounts.</p>
+
+                <div class="generator-form">
+                    <label for="length">Password Length:</label>
+                    <input type="number" id="length" min="8" max="20" value="12">
+                    <button id="generateBtn" class="btn">Generate Password</button>
+                </div>
+                <div id="generatedPassword" class="animated fadeIn">Your generated password will appear here</div>
+                <button id="copyPassword" class="btn">Copy Password</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Password Strength Checker & Generator | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
